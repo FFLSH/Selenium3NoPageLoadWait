@@ -16,9 +16,6 @@ namespace Selenium_3_Sample
 
             IWebDriver fireFoxDriver = new FirefoxDriver();
 
-            fireFoxDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-            fireFoxDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(30));
-
             fireFoxDriver.Navigate().GoToUrl("http://google.com");
 
             Assert.AreEqual("Google", fireFoxDriver.Title);
